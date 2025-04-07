@@ -16,7 +16,7 @@
         body, html {
             height: 100%;
             font-family: Arial, sans-serif;
-            background-image: url("landscape.jpg"); /* Corrected background image */
+            background-image: url("patrick.jpg"); /* Corrected background image */
             background-size: cover; /* Ensure the background image covers the entire area */
             background-position: center; /* Center the background image */
             background-repeat: no-repeat; /* Prevent the background image from repeating */
@@ -72,22 +72,22 @@
         }
         #clock {
         font-size: 40px;
-        background-color: orange;
-        padding: 20px 50px;
+        background-color: rgb(0, 20, 133);
+        padding: 20px 20px;
         margin-top: 10px;
         border-radius: 10px;
       }
-      a {
+      a,button {
             text-decoration: none; /* Remove underline */
             color: black; /* Change text color to black */
         }
 
-        a:hover {
-            color: #555; /* Optional: Change text color on hover */
+        a,button:hover {
+            background-color: rgba(255, 255, 255, 0.5);/* Optional: Change text color on hover */
         }
         </style>
 </head>
-<body onload="getTime()">
+<body>
     <div class="icon-container">
         <!-- 15 icon elements -->
         <a href="https://chatgpt.com/" class="icon-button">
@@ -161,6 +161,9 @@
             <div id="show">GDB Compiler</div>
             <img src="https://img.informer.com/icons_mac/png/128/665/665891.png" alt="Icon 9">
         </a>
+        <audio id="audio-player" src="invcitus.mp3"></audio>
+    <!-- Play/Pause Button -->
+    <button class="play-pause-button" onclick="togglePlayPause()">Pray</button>
        
     </div>
     <script src = "script.js"></script>
