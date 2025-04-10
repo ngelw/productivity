@@ -21,13 +21,39 @@ getTime();
 setInterval(getTime, 1000);
 function togglePlayPause() {
     const audioPlayer = document.getElementById("audio-player");
-    const playPauseButton = document.querySelector(".play-pause-button");
+    const playPauseButton = document.getElementById("audio-player-");
 
     if (audioPlayer.paused) {
         audioPlayer.play();
-        playPauseButton.textContent = "Pause";
+        playPauseButton.textContent = "End the Prayer🙏";
     } else {
         audioPlayer.pause();
-        playPauseButton.textContent = "Play";
+        playPauseButton.textContent = "Pray🙏";
+    }
+}
+function toggleMotivation() {
+    const audioPlayer = document.getElementById("audio-player2");
+    const playPauseButton = document.getElementById("audio-player2-");
+
+    if (audioPlayer.paused) {
+        audioPlayer.play();
+        playPauseButton.textContent = "Enough😎";
+    } else {
+        audioPlayer.pause();
+        playPauseButton.textContent = "Hype";
+    }
+}
+function toss(){
+    const tossResult = Math.floor(Math.random() * 2) + 1;
+    const tossbutton= document.getElementById("tossbutton");
+    const audioPlayer = document.getElementById("toss-audio");
+    audioPlayer.play();
+    // tossbutton.textContent = "Tossing...";
+    if(tossResult === 1){
+        document.getElementById("toss").innerHTML = "<p>Heads</p><br>again?";
+    }
+    else{
+        document.getElementById("toss").innerHTML = "<p>Tails</p><br>again?";
+        tossbutton.textContent = "Tails,again?";
     }
 }
