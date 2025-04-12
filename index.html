@@ -86,14 +86,15 @@
             background-color: rgba(255, 255, 255, 0.5);/* Optional: Change text color on hover */
         }
         button:hover {
-            background-color: rgba(235, 0, 0, 0.5);/* Optional: Change text color on hover */
+            background-color: rgba(0, 162, 255, 0.5);/* Optional: Change text color on hover */
         }
         button {
-            background-color: rgba(255, 159, 159, 0.5);
+            background-color: rgba(255, 255, 215, 0.5);
             font-size: 48px;
             font-weight: bold;
             max-width: 90%;
             max-height: 90%;
+            border: none;
             margin-bottom: 10px;
         }
         </style>
@@ -150,9 +151,9 @@
           </div>
         <!-- clock ends here -->
          <audio id="toss-audio" src="toss.mp3"></audio>
-         <a class="icon-button">
-            <button id ="toss" onclick="toss()">Toss Coin</button>
-            </a>
+         
+            <button class="icon-button" id ="toss" onclick="toss()">Toss Coin</button>
+            
 
         
             <audio id="audio-player" src="invcitus.mp3"></audio>

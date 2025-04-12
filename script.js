@@ -43,17 +43,62 @@ function toggleMotivation() {
         playPauseButton.textContent = "Hype";
     }
 }
-function toss(){
-    const tossResult = Math.floor(Math.random() * 2) + 1;
-    const tossbutton= document.getElementById("tossbutton");
+// function toss(){
+//     const tossResult =  Math.floor(Math.random() * 2);
+//     const tossbutton= document.getElementById("tossbutton");
+//     const audioPlayer = document.getElementById("toss-audio");
+//     audioPlayer.play();
+//     // tossbutton.textContent = "Tossing...";
+//     if(tossResult === 1){
+//         document.getElementById("toss").innerHTML = "<p>Heads</p><br>again?";
+//         document.getElementById("toss").style.backgroundColor = "black";
+//         let inte= setInterval(() => {
+//             document.getElementById("toss").style.backgroundColor = "green";
+//         }, 1000);
+//         if(document.getElementById("toss").style.backgroundColor === "green"){
+//             clearInterval(inte);
+//         }
+        
+        
+//     }
+//     else{
+//         document.getElementById("toss").innerHTML = "<p>Tails</p><br>again?";
+        
+//         document.getElementById("toss").style.backgroundColor = "black";
+//         let cinte= setInterval(() => {
+//             document.getElementById("toss").style.backgroundColor = "red";
+//         }, 1000);
+//         if(document.getElementById("toss").style.backgroundColor === "red"){
+//             clearInterval(cinte);
+//         }
+        
+//     }
+// }
+function toss() {
+    const tossResult = Math.floor(Math.random() * 2); // Generates 0 for Heads, 1 for Tails
+    const tossButton = document.getElementById("tossbutton");
     const audioPlayer = document.getElementById("toss-audio");
-    audioPlayer.play();
-    // tossbutton.textContent = "Tossing...";
-    if(tossResult === 1){
-        document.getElementById("toss").innerHTML = "<p>Heads</p><br>again?";
+    const tossElement = document.getElementById("toss");
+
+    // Play the toss audio
+    if (audioPlayer) {
+        audioPlayer.play();
     }
-    else{
-        document.getElementById("toss").innerHTML = "<p>Tails</p><br>again?";
-        tossbutton.textContent = "Tails,again?";
-    }
+
+    // Set the background to black first
+    tossElement.style.backgroundColor = "pink";
+    tossElement.innerHTML = "Tossing";
+
+    // Start a timeout to change the color to green or red after a short delay
+    setTimeout(() => {
+        if (tossResult === 0) {
+            tossElement.innerHTML = "<p>Heads</p><br>Try again?";
+            tossElement.style.backgroundColor = "green";
+        } else {
+            tossElement.innerHTML = "<p>Tails</p><br>Try again?";
+            tossElement.style.backgroundColor = "red";
+        }
+    }, 300); // Delay of 1 second to simulate the toss animation
+
+   
 }
