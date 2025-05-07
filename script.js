@@ -93,10 +93,10 @@ function toss() {
     setTimeout(() => {
         if (tossResult === 0) {
             tossElement.innerHTML = "<p>Heads</p><br>Try again?";
-            tossElement.style.backgroundColor = "green";
+            tossElement.style.backgroundColor = "rgba(0, 43, 6, 0.5)";
         } else {
             tossElement.innerHTML = "<p>Tails</p><br>Try again?";
-            tossElement.style.backgroundColor = "red";
+            tossElement.style.backgroundColor = "rgba(95, 1, 1, 0.69)";
         }
     }, 300); // Delay of 1 second to simulate the toss animation
 
