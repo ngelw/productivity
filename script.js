@@ -8,14 +8,14 @@ function getTime(){
         hours = hours - 12;
     }
     let minutes = time.getMinutes();
-    let seconds = time.getSeconds();
+    // let seconds = time.getSeconds();
 
     hours = hours < 10 ? '0' + hours : hours;
     minutes = minutes < 10 ? '0' + minutes : minutes;
-    seconds = seconds < 10 ? '0' + seconds : seconds;
+    // seconds = seconds < 10 ? '0' + seconds : seconds;
 
 
-    a.innerHTML = `${hours}:${minutes}:${seconds}`;
+    a.innerHTML = `${hours}:${minutes}`;
 }
 getTime();
 setInterval(getTime, 1000);
