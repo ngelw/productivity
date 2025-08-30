@@ -92,7 +92,7 @@ function toss() {
     // Start a timeout to change the color to green or red after a short delay
     setTimeout(() => {
         if (tossResult === 0) {
-            tossElement.innerHTML = "<p>Heads</p>?";
+            tossElement.innerHTML = "<p>Heads</p>";
             tossElement.style.backgroundColor = "rgba(0, 43, 6, 0.5)";
         } else {
             tossElement.innerHTML = "<p>Tails</p><br";
