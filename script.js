@@ -87,7 +87,7 @@ function toss() {
 
     // Set the background to black first
     tossElement.style.backgroundColor = "pink";
-    tossElement.innerHTML = "Tossing";
+    tossElement.innerHTML = ".... .  .   .";
 
     // Start a timeout to change the color to green or red after a short delay
     setTimeout(() => {
